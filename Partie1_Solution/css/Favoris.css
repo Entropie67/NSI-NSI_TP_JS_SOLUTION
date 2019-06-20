@@ -1,0 +1,24 @@
+/***************************************/
+/* CE FICHIER NE DOIT PAS ETRE MODIFIÉ */
+/***************************************/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #888888;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+h1 {
+    color: #00BBFF;
+    text-align: center;
+}
+span {
+    font-weight: normal;
+    font-size: 80%;
+}
+
+.lien {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
