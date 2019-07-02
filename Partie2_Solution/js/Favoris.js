@@ -92,7 +92,7 @@ ajouterLienElt.addEventListener("click", function () {
     formAjoutElt.appendChild(urlElt);
     formAjoutElt.appendChild(ajoutElt);
 
-    var p = document.querySelector("p");
+    var p = document.querySelector("#formulaire");
     // Remplace le bouton d'ajout par le formulaire d'ajout
     p.replaceChild(formAjoutElt, ajouterLienElt);
 
