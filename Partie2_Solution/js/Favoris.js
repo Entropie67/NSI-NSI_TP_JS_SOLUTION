@@ -31,13 +31,14 @@ function creerElementLien(lien) {
     titreElt.style.color = "#FF8C00";
     titreElt.style.textDecoration = "none";
     titreElt.style.marginRight = "5px";
+    titreLien.style.fontWeight = "bolder";
     titreElt.appendChild(document.createTextNode(lien.titre));
 
     let urlElt = document.createElement("span");
     urlElt.appendChild(document.createTextNode(lien.url));
 
     // Cette ligne contient le titre et l'URL du lien
-    let ligneTitreElt = document.createElement("h4");
+    let ligneTitreElt = document.createElement("p");
     ligneTitreElt.style.margin = "0px";
     ligneTitreElt.appendChild(titreElt);
     ligneTitreElt.appendChild(urlElt);

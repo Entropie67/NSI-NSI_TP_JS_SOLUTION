@@ -32,14 +32,15 @@ function creerElementLien(lien) {
     titreLien.style.color = "#FF8C00"; // Modification du style de la balise <a>
     titreLien.style.textDecoration = "none"; // Modification du style de la balise <a>
     titreLien.style.marginRight = "5px"; // Modification du style de la balise <a>
+    titreLien.style.fontWeight = "bolder";
     titreLien.appendChild(document.createTextNode(lien.titre)); // On rajoute à la balise <a> un fils de type texte qui contient le titre du lien
 
     var urlLien = document.createElement("span"); // Création d'un élément <span>
     urlLien.appendChild(document.createTextNode(lien.url)); // On rajoute à la balise <span> un fils de type texte qui contient l'adresse du lien
 
     // Cette ligne contient le titre et l'URL du lien
-    var ligneTitre = document.createElement("h4"); // Création d'un élément <h4>
-    ligneTitre.style.margin = "0px"; // Modification du style de la balise <h4>
+    var ligneTitre = document.createElement("p"); // Création d'un élément <p>
+    ligneTitre.style.margin = "0px"; // Modification du style de la balise <p>
     ligneTitre.appendChild(titreLien); // On ajoute à la balise <h4> le fils <a> précédent
     ligneTitre.appendChild(urlLien); // Puis on ajoute à la balise <h4> le fils <span> précédent
 
