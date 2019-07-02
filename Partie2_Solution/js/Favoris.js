@@ -31,7 +31,7 @@ function creerElementLien(lien) {
     titreElt.style.color = "#FF8C00";
     titreElt.style.textDecoration = "none";
     titreElt.style.marginRight = "5px";
-    titreLien.style.fontWeight = "bolder";
+    titreElt.style.fontWeight = "bolder";
     titreElt.appendChild(document.createTextNode(lien.titre));
 
     let urlElt = document.createElement("span");
