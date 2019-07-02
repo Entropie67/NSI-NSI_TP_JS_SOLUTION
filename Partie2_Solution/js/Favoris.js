@@ -55,10 +55,10 @@ function creerElementLien(lien) {
     return divLienElt;
 }
 
-var contenuElt = document.getElementById("contenu");
+let contenuElt = document.getElementById("contenu");
 // Parcours de la liste des liens et ajout d'un élément au DOM pour chaque lien
 listeLiens.forEach(lien => {
-    var lienElt = creerElementLien(lien);
+    let lienElt = creerElementLien(lien);
     contenuElt.appendChild(lienElt);
 });
 // #########################################################################
@@ -67,7 +67,7 @@ listeLiens.forEach(lien => {
 
 // Crée et renvoie un élément DOM de type input
 function creerElementInput(placeholder, taille) {
-    var inputElt = document.createElement("input");
+    let inputElt = document.createElement("input");
     inputElt.type = "text";
     inputElt.setAttribute("placeholder", placeholder);
     inputElt.setAttribute("size", taille);
@@ -75,24 +75,24 @@ function creerElementInput(placeholder, taille) {
     return inputElt;
 }
 
-var ajouterLienElt = document.getElementById("ajoutLien");
+let ajouterLienElt = document.getElementById("ajoutLien");
 // Gère l'ajout d'un nouveau lien
 ajouterLienElt.addEventListener("click", function () {
-    var auteurElt = creerElementInput("Entrez le présentateur", 20);
-    var titreElt = creerElementInput("Entrez le titre du lien", 40);
-    var urlElt = creerElementInput("Entrez l'URL du lien", 40);
+    let auteurElt = creerElementInput("Entrez le présentateur", 20);
+    let titreElt = creerElementInput("Entrez le titre du lien", 40);
+    let urlElt = creerElementInput("Entrez l'URL du lien", 40);
 
-    var ajoutElt = document.createElement("input");
+    let ajoutElt = document.createElement("input");
     ajoutElt.type = "submit";
     ajoutElt.value = "Ajouter";
 
-    var formAjoutElt = document.createElement("form");
+    let formAjoutElt = document.createElement("form");
     formAjoutElt.appendChild(auteurElt);
     formAjoutElt.appendChild(titreElt);
     formAjoutElt.appendChild(urlElt);
     formAjoutElt.appendChild(ajoutElt);
 
-    var p = document.querySelector("#formulaire");
+    let p = document.querySelector("#formulaire");
     // Remplace le bouton d'ajout par le formulaire d'ajout
     p.replaceChild(formAjoutElt, ajouterLienElt);
 
@@ -100,7 +100,7 @@ ajouterLienElt.addEventListener("click", function () {
     formAjoutElt.addEventListener("submit", function (e) {
         e.preventDefault(); // Annule la publication du formulaire
 
-        var url = urlElt.value;
+        let url = urlElt.value;
         // Si l'URL ne commence ni par "http://" ni par "https://"
         if ((url.indexOf("http://") !== 0) && (url.indexOf("https://") !== 0)) {
             // On la préfixe par "http://"
@@ -108,7 +108,7 @@ ajouterLienElt.addEventListener("click", function () {
         }
 
         // Création de l'objet contenant les données du nouveau lien
-        var lien = {
+        let lien = {
             titre: titreElt.value,
             url: url,
             auteur: auteurElt.value
