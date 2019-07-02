@@ -77,7 +77,7 @@ function creerElementInput(placeholder, taille) {
 
 let ajouterLienElt = document.getElementById("ajoutLien");
 // Gère l'ajout d'un nouveau lien
-ajouterLienElt.addEventListener("click", function () {
+ajouterLienElt.addEventListener("click", () => {
     let auteurElt = creerElementInput("Entrez le présentateur", 20);
     let titreElt = creerElementInput("Entrez le titre du lien", 40);
     let urlElt = creerElementInput("Entrez l'URL du lien", 40);
@@ -97,7 +97,7 @@ ajouterLienElt.addEventListener("click", function () {
     p.replaceChild(formAjoutElt, ajouterLienElt);
 
     // Ajoute le nouveau lien
-    formAjoutElt.addEventListener("submit", function (e) {
+    formAjoutElt.addEventListener("submit", e => {
         e.preventDefault(); // Annule la publication du formulaire
 
         let url = urlElt.value;
@@ -114,7 +114,7 @@ ajouterLienElt.addEventListener("click", function () {
             auteur: auteurElt.value
         };
 
-        var lienElt = creerElementLien(lien);
+        let lienElt = creerElementLien(lien);
         // Ajoute le nouveau lien en haut de la liste
         contenuElt.insertBefore(lienElt, contenuElt.firstChild);
 
@@ -122,7 +122,7 @@ ajouterLienElt.addEventListener("click", function () {
         p.replaceChild(ajouterLienElt, formAjoutElt);
 
         // Création du message d'information
-        var infoElt = document.createElement("div");
+        let infoElt = document.createElement("div");
         infoElt.classList.add("info");
         infoElt.textContent = "Le lien \"" + lien.titre + "\" a bien été ajouté.";
         p.insertBefore(infoElt, ajouterLienElt);
