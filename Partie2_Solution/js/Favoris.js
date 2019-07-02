@@ -57,10 +57,13 @@ function creerElementLien(lien) {
 
 var contenuElt = document.getElementById("contenu");
 // Parcours de la liste des liens et ajout d'un élément au DOM pour chaque lien
-listeLiens.forEach(function (lien) {
+listeLiens.forEach(lien => {
     var lienElt = creerElementLien(lien);
     contenuElt.appendChild(lienElt);
 });
+// #########################################################################
+// Modification pour la partie 2
+//##########################################################################
 
 // Crée et renvoie un élément DOM de type input
 function creerElementInput(placeholder, taille) {

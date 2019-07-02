@@ -60,7 +60,7 @@ function creerElementLien(lien) {
 let contenu = document.getElementById("contenu"); // On selectionne notre div d'Id contenu
 
 // Parcours de la liste des liens et ajout d'un élément au DOM pour chaque lien
-listeLiens.forEach(function (lien) {  //forEach permet d'applique la fonction à chaque élément d'un tableau
+listeLiens.forEach(lien => {  //forEach permet d'applique la fonction à chaque élément d'un tableau
     let elementLien = creerElementLien(lien);
     contenu.appendChild(elementLien); // On ajoute notre div renvoyée par la fonction à notre div contenu.
 });
