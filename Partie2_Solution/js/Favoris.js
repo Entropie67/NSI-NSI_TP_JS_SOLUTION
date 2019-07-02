@@ -102,7 +102,7 @@ ajouterLienElt.addEventListener("click", () => {
 
         let url = urlElt.value;
         // Si l'URL ne commence ni par "http://" ni par "https://"
-        if ((url.indexOf("http://") !== 0) && (url.indexOf("https://") !== 0)) {
+        if (!(url.startsWith("http://")) && !(url.startsWith("https://"))) {
             // On la préfixe par "http://"
             url = "http://" + url;
         }
