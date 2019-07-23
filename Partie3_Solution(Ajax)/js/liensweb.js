@@ -98,7 +98,7 @@ ajouterLienElt.addEventListener("click", function () {
 
         // Envoi de l'objet au serveur
         ajaxPost("https://oc-jswebsrv.herokuapp.com/api/lien", lien,
-            function (reponse) {
+            function () {
                 // Le film est affiché dans la console en cas de succès
                 console.log("Le lien " + JSON.stringify(lien) + " a été envoyé au serveur");
                 ajoute();
